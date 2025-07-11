@@ -1,8 +1,9 @@
+/*
 ---------------------Testbench--------------------
 |---request[1:0]---->|        |-----grant[1:0]-->|
 |---rst------------->|Arbiter |<----clk--------->|
 |                    |        |                  |
-
+*/
 
 module top_module();
   logic [1:0] grant, request;
