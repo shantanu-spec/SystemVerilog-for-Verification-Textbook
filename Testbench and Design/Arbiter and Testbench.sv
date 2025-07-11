@@ -49,3 +49,10 @@ module test_with_port (input logic[1:0] grant, output logic [1:0]request, output
 $finish;        
 	end
 endmodule
+
+/*OUTPUT
+# run 500ns
+# @50:  Drove req = 01
+# @250: Success: grant == 2'b01
+# ** Note: $finish    : testbench.sv(44)
+*/
