@@ -50,3 +50,9 @@ module top_module;
 
   end
 endmodule:top_module
+
+//# Value of data in : 00, address: f 
+//# Last set address value: f
+//# Value of data in : 03, address: 4 
+//# Last set address value: 4
+//# Last set address value: 4
