@@ -2,7 +2,7 @@
 Complete the function print_all in class MemTrans to print out data_in and address using class PrintUtilities. Demonstrate using the function print_all
 */
 
-module top_module;
+
 
 class PrintUtilities;
   
@@ -31,6 +31,8 @@ class MemTrans;
   
 endclass: MemTrans
 
+module top_module;
+
   
   initial begin
   MemTrans mem1;
@@ -41,6 +43,5 @@ endclass: MemTrans
     mem1.print_all;
   end
 endmodule: top_module
-
 //#                    0: Address = f
 //#                    0: Data = 21
