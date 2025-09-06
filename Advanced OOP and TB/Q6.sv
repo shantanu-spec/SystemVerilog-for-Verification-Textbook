@@ -1,4 +1,5 @@
 //Given Binary::copy function create ExtBinary copy
+//From the solution to Exercise 6, use the copy function to ocopy the object pointed to by the extended class handle mc to the extended class handle mc2
 class Binary;
   rand bit [3:0] val1, val2;
   
@@ -29,9 +30,10 @@ class ExtBinary extends Binary;
     return val1*val2;
   endfunction:mult_val
   
-  virtual function Binary copy();
-  	ExtBinary copy;
+  virtual function ExtBinary copy();
+  
   	copy = new(this.val1, this.val2); 
+    super.copy();
     return copy;
   endfunction: copy
   
@@ -46,18 +48,3 @@ class Exercise3 extends ExtBinary;
   constraint val1set {val1 < 10;}
   constraint val2set {val2 < 10;}
 endclass: Exercise3
-
-module ex3;
-  Exercise3 ex3;
-  initial begin
-    
-    ex3 = new(0,0);
-    if(!ex3.randomize())
-      $display("Randomization ERROR!");
-    else
-      ex3.print_int(ex3.val1);
-      ex3.print_int(ex3.val2);
-      ex3.print_int(ex3.mult_val());
-    
-  end
-endmodule
